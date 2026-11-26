@@ -4,8 +4,7 @@ import requests
 gemini_key = os.environ["GEMINI_API_KEY"]
 bot_token = os.environ["TELEGRAM_BOT_TOKEN"]
 chat_id = os.environ["TELEGRAM_CHAT_ID"]
-model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-
+model = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 r = requests.post(
     url,
